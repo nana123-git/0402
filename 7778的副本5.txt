@@ -1,0 +1,14 @@
+mkdir -p /opt/setup
+
+cd /opt/setup/p95
+chmod +x ./*
+./install_all_falco.sh
+
+
+echo "enable.site.Referer=true" > /var/lib/tomcat7/webapps/DLP/WEB-INF/classes/applicationCustom.properties 
+echo "site.Referer=https://192.168.10.42:8443" >> /var/lib/tomcat7/webapps/DLP/WEB-INF/classes/applicationCustom.properties
+systemctl restart tomcat7
+
+
+指导书指导书指导书指导书指导书指导书指导书指导书
+指导书指导书指导书指导书指导书指导书指导书指导书
